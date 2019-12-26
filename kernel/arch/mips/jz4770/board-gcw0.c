@@ -327,8 +327,8 @@ static struct jz_battery_platform_data gcw0_battery_pdata = {
 	.info = {
 		.name = "battery",
 		.technology = POWER_SUPPLY_TECHNOLOGY_LIPO,
-		.voltage_max_design = 5700000,
-		.voltage_min_design = 4600000,
+		.voltage_max_design = 4200000,
+		.voltage_min_design = 3100000,
 	},
 };
 
