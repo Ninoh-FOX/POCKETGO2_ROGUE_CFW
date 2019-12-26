@@ -27,8 +27,6 @@
 #define SLOW_MOUSE_ZONE		600
 #define AXIS_ZERO_0		1730
 #define AXIS_ZERO_1		1730
-#define AXIS_ZERO_3		1620
-#define AXIS_ZERO_4		1620
 
 #if (POWEROFF_TIMEOUT > 0)
 #include <pthread.h>
@@ -468,12 +466,13 @@ int do_listen(const char *event, const char *jevent, const char *uinput)
 				//fprintf(stderr, "code: %d value: %d\n",my_jevent.code,my_jevent.value);
 				switch(my_jevent.code) {
 					case 0:
-						current_dpad[0] = my_jevent.value > AXIS_ZERO_0 + DEAD_ZONE;
-						current_dpad[1] = my_jevent.value < AXIS_ZERO_0 - DEAD_ZONE;
+						current_dpad[0] = my_jevent.value < AXIS_ZERO_0 - DEAD_ZONE;
+						current_dpad[1] = my_jevent.value > AXIS_ZERO_0 + DEAD_ZONE;
+						
 						break;
 					case 1:
-						current_dpad[2] = my_jevent.value > AXIS_ZERO_1 + DEAD_ZONE;
-						current_dpad[3] = my_jevent.value < AXIS_ZERO_1 - DEAD_ZONE;
+						current_dpad[2] = my_jevent.value < AXIS_ZERO_1 - DEAD_ZONE;
+						current_dpad[3] = my_jevent.value > AXIS_ZERO_1 + DEAD_ZONE;
 						break;
 					default:
 						break;
