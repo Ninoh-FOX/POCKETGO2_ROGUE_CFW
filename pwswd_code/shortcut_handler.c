@@ -31,7 +31,7 @@ struct button buttons[] = {
 	_BUTTON(VOLDOWN),
 	_BUTTON(L2),
 	_BUTTON(R2),
-	-BUTTON(MENU),
+	_BUTTON(MENU),
 	
 };
 
