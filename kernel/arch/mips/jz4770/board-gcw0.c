@@ -305,18 +305,18 @@ static struct rda5807_platform_data gcw0_rda5807_pdata = {
 
 /* Power Management Unit */
 
-static struct act8600_outputs_t act8600_outputs[] = {
-	{ 4, 0x57, true  }, /* USB OTG: 5.3V */
-	{ 5, 0x31, true  }, /* AVD:     2.5V */
-	{ 6, 0x39, false }, /* LCD:     3.3V */
-	{ 7, 0x39, true  }, /* generic: 3.3V */
-	{ 8, 0x24, true  }, /* generic: 1.8V */
-};
+//static struct act8600_outputs_t act8600_outputs[] = {
+//	{ 4, 0x57, true  }, /* USB OTG: 5.3V */
+//	{ 5, 0x31, true  }, /* AVD:     2.5V */
+//	{ 6, 0x39, false }, /* LCD:     3.3V */
+//	{ 7, 0x39, true  }, /* generic: 3.3V */
+//	{ 8, 0x24, true  }, /* generic: 1.8V */
+//};
 
-static struct act8600_platform_pdata_t act8600_platform_pdata = {
-        .outputs = act8600_outputs,
-        .nr_outputs = ARRAY_SIZE(act8600_outputs),
-};
+//static struct act8600_platform_pdata_t act8600_platform_pdata = {
+//        .outputs = act8600_outputs,
+//        .nr_outputs = ARRAY_SIZE(act8600_outputs),
+//};
 
 
 /* Battery */
@@ -335,28 +335,28 @@ static struct jz_battery_platform_data gcw0_battery_pdata = {
 
 /* Charger */
 
-#define GPIO_DC_CHARGER		JZ_GPIO_PORTF(5)
+//#define GPIO_DC_CHARGER		JZ_GPIO_PORTF(5)
 #define GPIO_USB_CHARGER	JZ_GPIO_PORTB(5)
 
 static char *gcw0_batteries[] = {
 	"battery",
 };
 
-static struct gpio_charger_platform_data gcw0_dc_charger_pdata = {
-	.name = "dc",
-	.type = POWER_SUPPLY_TYPE_MAINS,
-	.gpio = GPIO_DC_CHARGER,
-	.supplied_to = gcw0_batteries,
-	.num_supplicants = ARRAY_SIZE(gcw0_batteries),
-};
+//static struct gpio_charger_platform_data gcw0_dc_charger_pdata = {
+//	.name = "dc",
+//	.type = POWER_SUPPLY_TYPE_MAINS,
+//	.gpio = GPIO_DC_CHARGER,
+//	.supplied_to = gcw0_batteries,
+//	.num_supplicants = ARRAY_SIZE(gcw0_batteries),
+//};
 
-static struct platform_device gcw0_dc_charger_device = {
-	.name = "gpio-charger",
-	.id = 0,
-	.dev = {
-		.platform_data = &gcw0_dc_charger_pdata,
-	},
-};
+//static struct platform_device gcw0_dc_charger_device = {
+//	.name = "gpio-charger",
+//	.id = 0,
+//	.dev = {
+//		.platform_data = &gcw0_dc_charger_pdata,
+//	},
+//};
 
 static struct gpio_charger_platform_data gcw0_usb_charger_pdata = {
 	.name = "usb",
@@ -441,21 +441,21 @@ static struct i2c_board_info gcw0_i2c0_devs[] __initdata = {
 };
 
 /* We don't have a use for the INT pin yet. */
-#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
-static struct i2c_board_info gcw0_i2c1_devs[] __initdata = {
-	{
-		.type		= "mxc6225",
-		.addr		= MXC6225_I2C_ADDR,
-	},
-};
+//#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
+//static struct i2c_board_info gcw0_i2c1_devs[] __initdata = {
+//	{
+//		.type		= "mxc6225",
+//		.addr		= MXC6225_I2C_ADDR,
+//	},
+//};
 
-static struct i2c_board_info gcw0_i2c3_devs[] __initdata = {
-	{
-		.type		= ACT8600_NAME,
-		.addr		= ACT8600_I2C_ADDR,
-		.platform_data	= &act8600_platform_pdata,
-	},
-};
+//static struct i2c_board_info gcw0_i2c3_devs[] __initdata = {
+//	{
+//		.type		= ACT8600_NAME,
+//		.addr		= ACT8600_I2C_ADDR,
+//		.platform_data	= &act8600_platform_pdata,
+//	},
+//};
 
 static struct i2c_board_info gcw0_i2c4_devs[] __initdata = {
 	/* the IT6610 is on this bus, but we don't have a driver for it */
@@ -801,7 +801,7 @@ static struct platform_device *jz_platform_devices[] __initdata = {
 	&jz4770_msc0_device,
 	&jz4770_msc1_device,
 	&gcw0_led_device,
-	&gcw0_dc_charger_device,
+//	&gcw0_dc_charger_device,
 	&gcw0_usb_charger_device,
 	&jz4770_vpu_device,
 	&gcw0_rfkill_device,
@@ -832,8 +832,8 @@ static void __init board_i2c_init(void)
 	jz4770_i2c1_device.dev.platform_data = &gcw0_i2c1_platform_data;
 
 	i2c_register_board_info(0, gcw0_i2c0_devs, ARRAY_SIZE(gcw0_i2c0_devs));
-	i2c_register_board_info(1, gcw0_i2c1_devs, ARRAY_SIZE(gcw0_i2c1_devs));
-	i2c_register_board_info(3, gcw0_i2c3_devs, ARRAY_SIZE(gcw0_i2c3_devs));
+//	i2c_register_board_info(1, gcw0_i2c1_devs, ARRAY_SIZE(gcw0_i2c1_devs));
+//	i2c_register_board_info(3, gcw0_i2c3_devs, ARRAY_SIZE(gcw0_i2c3_devs));
 	i2c_register_board_info(4, gcw0_i2c4_devs, ARRAY_SIZE(gcw0_i2c4_devs));
 }
 
@@ -843,13 +843,13 @@ static void __init board_gpio_setup(void)
 	jz_gpio_disable_pullup(JZ_GPIO_PORTD(18));
 
 	/* DC power source present (high active) */
-	jz_gpio_disable_pullup(GPIO_DC_CHARGER);
+//	jz_gpio_disable_pullup(GPIO_DC_CHARGER);
 
 	/* USB power source present (high active) */
 	jz_gpio_disable_pullup(GPIO_USB_CHARGER);
 
 	/* MXC6225 data sheet says INT should not be pulled up or down */
-	jz_gpio_disable_pullup(GPIO_MXC6225_INT);
+//	jz_gpio_disable_pullup(GPIO_MXC6225_INT);
 }
 
 static struct pinctrl_map pin_map[] __initdata = {
