@@ -113,7 +113,7 @@ UP_TO_DATE=yes
 
 if [ -f "$DATE_FILE" ] ; then
 	DATE="`cat $DATE_FILE`"
-	export DIALOGOPTS="--colors --backtitle \"OpenDingux update $DATE\""
+	export DIALOGOPTS="--colors --backtitle \"POCKETGO2 update $DATE\""
 fi
 
 echo "screen_color = (RED,RED,ON)" > /tmp/dialog_err.rc
