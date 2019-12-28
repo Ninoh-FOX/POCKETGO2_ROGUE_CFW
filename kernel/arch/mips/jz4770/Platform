@@ -1,0 +1,6 @@
+platform-$(CONFIG_MACH_JZ4770)	+= jz4770/
+cflags-$(CONFIG_MACH_JZ4770)	+= -I$(srctree)/arch/mips/include/asm/mach-jz4770
+# Note: Specifying the load address with leading ffffffff as is done elsewhere
+#       will break uImage on 32-bit host systems since the mkimage tool will
+#       use the first digits of the address instead of the last digits.
+load-$(CONFIG_MACH_JZ4770)	+= 0x80010000

@@ -1,0 +1,13 @@
+#
+# Displays configuration
+#
+
+menu "Display Device Drivers"
+
+config PANEL_NT39016
+	# TODO: Switch to tristate once the driver is a module.
+	bool "Novatek NT39016 based panel"
+	help
+	  Select this if you are using a Novatek NT39016 LCD driver IC.
+
+endmenu

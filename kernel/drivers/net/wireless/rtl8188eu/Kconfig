@@ -1,0 +1,9 @@
+config RTL8188EU
+	tristate "Realtek RTL8188E 802.11n USB"
+	depends on USB
+	select CFG80211_WEXT
+	select WIRELESS_EXT
+	select WEXT_PRIV
+	---help---
+	  This is a driver for RTL8188E 802.11n USB wireless network adapters
+	  from Realtek itself, with updates from various people.

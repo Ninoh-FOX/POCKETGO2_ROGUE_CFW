@@ -1,0 +1,12 @@
+config RTL8192CU_ALT
+	tristate "Realtek RTL8192CU/RTL8188CU 802.11n USB (alternative driver)"
+	depends on USB
+	select CFG80211_WEXT
+	select WIRELESS_EXT
+	select WEXT_PRIV
+	---help---
+	This is a driver for Realtek RTL8192CU/RTL8188CU 802.11n USB
+	wireless network adapters from Realtek itself, with updates from
+	various people.
+
+	See: https://github.com/dz0ny/rt8192cu

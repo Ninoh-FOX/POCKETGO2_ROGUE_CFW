@@ -1,0 +1,23 @@
+config SND_JZ4770_SOC
+	tristate "SoC Audio for Ingenic JZ4770 SoC"
+	depends on MACH_JZ4770 && SND_SOC
+	help
+	  Say Y or M if you want to add support for codecs attached to
+	  the JZ4770 I2S interface. You will also need to select the audio
+	  interfaces to support below.
+
+config SND_JZ4770_SOC_I2S
+	depends on SND_JZ4770_SOC
+	tristate "SoC Audio (I2S protocol) for Ingenic JZ4770 SoC"
+	help
+	  Say Y if you want to use I2S protocol and I2S codec on Ingenic JZ4770
+	  based boards.
+
+config SND_JZ4770_SOC_GCW0
+	tristate "SoC Audio support for GCW Zero"
+	depends on SND_JZ4770_SOC && JZ4770_GCW0
+	select SND_JZ4770_SOC_I2S
+	select SND_SOC_JZ4770_CODEC
+	help
+	  Say Y if you want to add support for ASoC audio on the GCW Zero
+	  handheld game/media player.

@@ -1,0 +1,30 @@
+#
+# Vivante GPU support.
+#
+config GPU_VIVANTE_V4
+	tristate "Open Vivante V4 support"
+	depends on MACH_JZ4770
+	help
+	  Enable support for Vivante GPU cores. Version 4 interface.
+          If built as module, this builds a module named "galcore_v4.ko".
+
+config GPU_VIVANTE_GC860
+	def_bool y if MACH_JZ4770
+	depends on GPU_VIVANTE_V4
+
+config GPU_VIVANTE_PROFILER
+	bool "Enable performance counters support"
+	default y
+	depends on GPU_VIVANTE_V4
+	help
+	  Enable this to have the driver report statistics about which parts
+	  of the GPU are taxed the most.
+
+	  The only real reason to disable this is for binary compatibility
+	  with user space drivers compiled without profiler support.
+
+config GPU_VIVANTE_DEBUG
+	bool "Enable debugging support"
+	depends on GPU_VIVANTE_V4
+	help
+	  Enable this for additional debug logging.

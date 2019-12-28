@@ -1,0 +1,9 @@
+choice
+	prompt "Machine type"
+	depends on MACH_JZ4770
+	default JZ4770_GCW0
+
+config JZ4770_GCW0
+	bool "GCW Zero handheld game/media player"
+
+endchoice
