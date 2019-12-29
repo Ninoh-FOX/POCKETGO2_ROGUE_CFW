@@ -6,9 +6,9 @@ Oficial firmware for Pocketgo 2
 
 # features:
 
-- 1. Support to read the second sdcard in fat32, exFAT, ntfs, ext4 (recommended) and ext3 format.
+1. Support to read the second sdcard in fat32, exFAT, ntfs, ext4 (recommended) and ext3 format.
 
-- 2. Added key combinations with the power button:
+2. Added key combinations with the power button:
     - POWER + VOL + or VOL-: Adjust the brightness of the screen.
     - POWER + SELECT: Close the current application.
     - POWER + START: Restart the console.
@@ -17,10 +17,10 @@ Oficial firmware for Pocketgo 2
     - POWER + R1: Mouse emulation (Stick is movement and the L2 and R2 buttons the buttons)
     - POWER + DPAD up / dowm: Adjust the sharpness.
     - POWER + X: Take a screenshot.
+    
+3. In Gmenu2x the power button can turn the screen off or on.
 
-- 3. In Gmenu2x the power button can turn the screen off or on.
-
-- 4. You can change the cpu to maximum or minimum in gmenu2x for the opk, the same to change the name, description, icon and file filter.
+4. You can change the cpu to maximum or minimum in gmenu2x for the opk, the same to change the name, description, icon and file filter.
 
 # Installation:
 
