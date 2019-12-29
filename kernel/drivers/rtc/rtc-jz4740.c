@@ -21,12 +21,14 @@
 #include <linux/rtc.h>
 #include <linux/slab.h>
 #include <linux/spinlock.h>
+#include <linux/clk.h>
 
 #define JZ_REG_RTC_CTRL		0x00
 #define JZ_REG_RTC_SEC		0x04
 #define JZ_REG_RTC_SEC_ALARM	0x08
 #define JZ_REG_RTC_REGULATOR	0x0C
 #define JZ_REG_RTC_HIBERNATE	0x20
+#define JZ_REG_RTC_WAKEUP		0x24
 #define JZ_REG_RTC_SCRATCHPAD	0x34
 
 #define JZ_RTC_CTRL_WRDY	BIT(7)
@@ -56,6 +58,7 @@ struct jz4740_rtc {
 
 	int irq;
 
+	struct clk *clk;
 	spinlock_t lock;
 };
 
@@ -246,7 +249,8 @@ static int jz4740_rtc_probe(struct platform_device *pdev)
 {
 	int ret;
 	struct jz4740_rtc *rtc;
-	uint32_t scratchpad;
+	uint32_t rtcgr,scratchpad;
+	unsigned long rtc_rate;
 	const struct platform_device_id *id = platform_get_device_id(pdev);
 
 	rtc = devm_kzalloc(&pdev->dev, sizeof(*rtc), GFP_KERNEL);
@@ -280,7 +284,13 @@ static int jz4740_rtc_probe(struct platform_device *pdev)
 		dev_err(&pdev->dev, "Failed to ioremap mmio memory\n");
 		return -EBUSY;
 	}
-
+	
+	rtc->clk = devm_clk_get(&pdev->dev, "rtc");
+	if (IS_ERR(rtc->clk)) {
+		dev_err(&pdev->dev, "Failed to get RTC clock\n");
+		return -EBUSY;
+	}
+	
 	spin_lock_init(&rtc->lock);
 
 	platform_set_drvdata(pdev, rtc);
@@ -302,6 +312,22 @@ static int jz4740_rtc_probe(struct platform_device *pdev)
 		return ret;
 	}
 
+	rtc_rate = clk_get_rate(rtc->clk);
+	rtcgr = jz4740_rtc_reg_read(rtc, JZ_REG_RTC_REGULATOR);
+	if ((rtcgr & 0xffff) + 1 != rtc_rate) {
+		if (rtc_rate - 1 >= 0x10000) {
+			dev_warn(&pdev->dev, "Invalid RTC rate: %lu\n",
+				 rtc_rate);
+		} else {
+			dev_warn(&pdev->dev, "Resetting RTC pulse interval\n");
+			ret = jz4740_rtc_reg_write(rtc, JZ_REG_RTC_REGULATOR,
+				rtc_rate - 1);
+			if (ret)
+				dev_warn(&pdev->dev,
+					 "Could not update RTCGR: %d\n", ret);
+		}
+	}
+	
 	scratchpad = jz4740_rtc_reg_read(rtc, JZ_REG_RTC_SCRATCHPAD);
 	if (scratchpad != 0x12345678) {
 		ret = jz4740_rtc_reg_write(rtc, JZ_REG_RTC_SCRATCHPAD, 0x12345678);
