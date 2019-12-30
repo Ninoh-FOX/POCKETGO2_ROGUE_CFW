@@ -24,7 +24,11 @@ Oficial firmware for Pocketgo 2
 
 # Installation:
 
-For a correct installation, the first time it is advisable to flash the sd_image in an sdcard with Win32DiskImager for example.
+For a correct installation, the first time it is advisable to flash the sd_image in an sdcard with Win32DiskImager for example, too you need format the sdcard two times with SD Formatter before of flasher the sdcard.
+
+https://sourceforge.net/projects/win32diskimager/
+
+https://www.sdcard.org/downloads/formatter/
 
 You can also use flasher.opk for the same, but it takes much longer and being a console that has the SD1 (TF1) of the system at hand because I do not see it really necessary, even so, it is in the release. If you would like to use it, it is advisable to put it in the apps folder of the SD2 (TF2).
 
