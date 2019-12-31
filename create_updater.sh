@@ -86,10 +86,10 @@ fi
 if [ "$BOOTLOADERS" ] ; then
 
 	echo -n "Calculating SHA1 sum of bootloaders... "
-        sha1sum "$BOOTLOADERS" | cut -d' ' -f1 > "update/ubiboot-v20_mddr_512mb.sha1"
+        sha1sum "$BOOTLOADERS" | cut -d' ' -f1 > "update/ubiboot-v20_mddr_512mb.bin.sha1"
         echo "done"
 
-        BOOTLOADERS="$BOOTLOADERS update/ubiboot-v20_mddr_512mb.sha1"
+        BOOTLOADERS="$BOOTLOADERS update/ubiboot-v20_mddr_512mb.bin.sha1"
 fi
 
 if [ "$MININIT" ] ; then
