@@ -410,7 +410,7 @@ static struct platform_device gcw0_internal_usb_regulator_device = {
 
 /* USB OTG (musb) */
 
-#define GPIO_USB_OTG_ID_PIN	JZ_GPIO_PORTF(18)
+#define GPIO_USB_OTG_ID_PIN	JZ_GPIO_PORTF(12)
 
 static struct jz_otg_board_data gcw0_otg_board_data = {
 	.gpio_id_pin = GPIO_USB_OTG_ID_PIN,
@@ -441,7 +441,7 @@ static struct i2c_board_info gcw0_i2c0_devs[] __initdata = {
 };
 
 /* We don't have a use for the INT pin yet. */
-//#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
+#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
 //static struct i2c_board_info gcw0_i2c1_devs[] __initdata = {
 //	{
 //		.type		= "mxc6225",
