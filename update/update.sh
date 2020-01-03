@@ -6,6 +6,7 @@ export MININIT=./mininit-syspart
 export MODULES_FS=./modules.squashfs
 export ROOTFS=./rootfs.squashfs
 DATE_FILE=./date.txt
+VERSION_FILE=./version.txt
 
 SYSTEM_MOUNTPOINT=/mnt/_system_update
 
@@ -113,7 +114,8 @@ UP_TO_DATE=yes
 
 if [ -f "$DATE_FILE" ] ; then
 	DATE="`cat $DATE_FILE`"
-	export DIALOGOPTS="--colors --backtitle \"POCKETGO2 update $DATE\""
+	VERSION="`cat $VERSION_FILE`"
+	export DIALOGOPTS="--colors --backtitle \"POCKETGO2 update $VERSION $DATE\""
 fi
 
 echo "screen_color = (RED,RED,ON)" > /tmp/dialog_err.rc
