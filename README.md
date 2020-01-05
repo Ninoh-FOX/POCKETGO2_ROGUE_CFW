@@ -1,8 +1,8 @@
+<p align="center"><img class="center" src =https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/logos/logo_gcwzero_clut224.png></p>
+
 # POCKETGO2 ROGUE CFW
 
 Oficial firmware for Pocketgo 2
-
-<p align="center"><img class="center" src =https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/logos/logo_gcwzero_clut224.png></p>
 
 # update firmware 1.0.1: <br>
 https://github.com/Ninoh-FOX/POCKETGO2-ROGUE-CFW/releases/tag/1.0,1
