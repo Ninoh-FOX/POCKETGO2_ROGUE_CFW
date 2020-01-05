@@ -4,6 +4,18 @@ Oficial firmware for Pocketgo 2
 
 ![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/logos/logo_gcwzero_clut224.png)
 
+# update firmware 1.0.1: <br>
+https://github.com/Ninoh-FOX/POCKETGO2-ROGUE-CFW/releases/tag/1.0,1
+
+### 1.0.1:<br>
+
+1. Updated the file system, division and expansion scripts again.
+2. Gmenu2x analog stick control is removed
+3. Adjusted the battery.
+4. Update of the Stock Clock application with a new redesign. thanks to Rafa Vico (https://github.com/RafaVico)
+5. Text editor, corrected opk buttons. thanks to Rafa Vico (https://github.com/RafaVico)
+6. Added the hardware tester POCKETGO 2. thanks to Rafa Vico (https://github.com/RafaVico)
+
 # features:
 
 1. Support to read the second sdcard in fat32, exFAT, ntfs, ext4 (recommended) and ext3 format.
