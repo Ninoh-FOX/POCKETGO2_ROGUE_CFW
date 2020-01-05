@@ -9,7 +9,7 @@ https://github.com/Ninoh-FOX/POCKETGO2-ROGUE-CFW/releases/tag/1.0,1
 
 ### 1.0.1:<br>
 
-1. Updated the file system, division and expansion scripts again.
+1. Updated the file system, partition and expansion scripts again.
 2. Gmenu2x analog stick control is removed
 3. Adjusted the battery.
 4. Update of the Stock Clock application with a new redesign. thanks to Rafa Vico (https://github.com/RafaVico)
