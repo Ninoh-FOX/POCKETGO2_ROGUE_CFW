@@ -31,8 +31,8 @@
 #define JZ_REG_ADC_TS_DATA	8
 
 
-#define JOYSTICK_MIN_X		0
-#define JOYSTICK_MIN_Y  	0
+#define JOYSTICK_MIN_X		-200
+#define JOYSTICK_MIN_Y  	-200
 #define JOYSTICK_MAX_X		3400
 #define JOYSTICK_MAX_Y		3400
 
@@ -154,9 +154,9 @@ static int jz_joystick_probe(struct platform_device *pdev)
 	input_dev->dev.parent = &pdev->dev;
 
 	__set_bit(EV_ABS, input_dev->evbit);
-	input_set_abs_params(input_dev, ABS_X, 0, JOYSTICK_MAX_X,
+	input_set_abs_params(input_dev, ABS_X, JOYSTICK_MIN_X, JOYSTICK_MAX_X,
 			     JOYSTICK_NOISE_X, JOYSTICK_FLAT_X);
-	input_set_abs_params(input_dev, ABS_Y, 0, JOYSTICK_MAX_Y,
+	input_set_abs_params(input_dev, ABS_Y, JOYSTICK_MIN_Y, JOYSTICK_MAX_Y,
 			     JOYSTICK_NOISE_Y, JOYSTICK_FLAT_Y);
 
 	input_set_drvdata(input_dev, joystick);
