@@ -4,8 +4,17 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.2: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
+
 # update firmware 1.0.1: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
+
+### 1.0.2:<br>
+
+1. Fix clock hour reset when poweroff the console.
+2. Gmenu2x now can show two type of previews (put in /(romsdir)/.previews/).
+3. ajust the joystick (again).
 
 ### 1.0.1:<br>
 
