@@ -13,8 +13,13 @@ https://github.com/Ninoh-FOX/POCKETGO2-ROGUE-CFW/releases/tag/1.0,1
 2. Gmenu2x analog stick control is removed
 3. Adjusted the battery.
 4. Update of the Stock Clock application with a new redesign. thanks to Rafa Vico (https://github.com/RafaVico)
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot011.png)
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot012.png)
 5. Text editor, corrected opk buttons. thanks to Rafa Vico (https://github.com/RafaVico)
 6. Added the hardware tester POCKETGO 2. thanks to Rafa Vico (https://github.com/RafaVico)
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot008.png)
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot009.png)
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot010.png)
 
 # features:
 
