@@ -5,7 +5,7 @@
 Oficial firmware for Pocketgo 2
 
 # update firmware 1.0.1: <br>
-https://github.com/Ninoh-FOX/POCKETGO2-ROGUE-CFW/releases/tag/1.0,1
+https://github.com/Ninoh-FOX/POCKETGO2-ROGUE-CFW/releases/tag/1.0.1
 
 ### 1.0.1:<br>
 
