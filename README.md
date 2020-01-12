@@ -58,7 +58,7 @@ https://sourceforge.net/projects/win32diskimager/
 
 https://www.sdcard.org/downloads/formatter/
 
-One time that the program finish, put the sd in the console, NOT RESIZE THE PARTITION FROM PC!!
+One time that the program finish, put the sd in the console, NOT RESIZE THE PARTITION FROM PC!! The firmware has a script for auto resize!!
 
 You can also use flasher.opk for the same, but it takes much longer and being a console that has the SD1 (TF1) of the system at hand because I do not see it really necessary, even so, it is in the release. If you would like to use it, it is advisable to put it in the apps folder of the SD2 (TF2).
 
