@@ -34,6 +34,8 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 1. Support to read the second sdcard in fat32, exFAT, ntfs, ext4 (recommended) and ext3 format.
 
+NOTE: for that the ext4 sdcard works, you need format this from command lines since the console, if you go to use the pc, then format in ext3.
+
 2. Added key combinations with the power button:
 + POWER + VOL + or VOL-: Adjust the brightness of the screen.
 + POWER + SELECT: Close the current application.
@@ -55,6 +57,8 @@ For a correct installation, the first time it is advisable to flash the sd_image
 https://sourceforge.net/projects/win32diskimager/
 
 https://www.sdcard.org/downloads/formatter/
+
+One time that the program finish, put the sd in the console, NOT RESIZE THE PARTITION FROM PC!!
 
 You can also use flasher.opk for the same, but it takes much longer and being a console that has the SD1 (TF1) of the system at hand because I do not see it really necessary, even so, it is in the release. If you would like to use it, it is advisable to put it in the apps folder of the SD2 (TF2).
 
