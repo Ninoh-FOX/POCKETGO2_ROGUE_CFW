@@ -4,11 +4,23 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.3: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.3
+
 # update firmware 1.0.2: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 
 # update firmware 1.0.1: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
+
+## Changelog:<br>
+
+### 1.0.3:<br>
+
+1. Fixed and updated SDL2 libraries.
+2. Insert Scriptrunner app, now you can format the external sdcard in fat32, exfat or ext3 in the console.
+3. Fixed errors in games that not run.
+4. Fixed R2 time reactions.
 
 ### 1.0.2:<br>
 
