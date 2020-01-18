@@ -21,6 +21,8 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 2. Insert Scriptrunner app, now you can format the external sdcard in fat32, exfat or ext3 in the console.
 3. Fixed errors in games that not run.
 4. Fixed R2 time reactions.
+5. Recompiled PCSX4ALL
+6. Fixed Gmenu2x duplicate icons when this is edit
 
 ### 1.0.2:<br>
 
