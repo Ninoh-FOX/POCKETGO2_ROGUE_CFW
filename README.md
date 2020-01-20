@@ -70,6 +70,8 @@ For a correct installation, the first time it is advisable to flash the sd_image
 
 https://sourceforge.net/projects/win32diskimager/
 
+if W32DI NOT WORK fine, try them https://www.balena.io/etcher/
+
 https://www.sdcard.org/downloads/formatter/
 
 One time that the program finish, put the sd in the console, NOT RESIZE THE PARTITION FROM PC!! The firmware has a script for auto resize!!
