@@ -70,7 +70,9 @@ For a correct installation, the first time it is advisable to flash the sd_image
 
 https://sourceforge.net/projects/win32diskimager/
 
-if W32DI NOT WORK fine, try them https://www.balena.io/etcher/
+if W32DI NOT WORK fine, try them https://www.balena.io/etcher/ or you can type in a terminal the follow command: 
+
+sudo dd if=sd_image.bin of=/dev/(sdcard_partition)
 
 https://www.sdcard.org/downloads/formatter/
 
