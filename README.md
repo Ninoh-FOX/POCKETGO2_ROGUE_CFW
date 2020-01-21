@@ -89,6 +89,7 @@ First you need a pc or vm with Debian 9.11 64 bits.
 ### Pre-Build Steps ###
 
 $ sudo apt-get update
+
 $ sudo apt-get install bison flex gettext texinfo wget cpio python unzip mercurial subversion libncurses5-dev libc6-dev-i386 bzr squashfs-tools
 ## you need a javac compiler, (i.e. sudo apt-get install gcj-4.9-jdk)
 
@@ -96,11 +97,17 @@ $ sudo apt-get install bison flex gettext texinfo wget cpio python unzip mercuri
 
 ## Enter the directory where you want to clone the git repo
 ## This assumes that you have a clean buildroot/dl and buildroot/output directory 
+
 $ git clone https://github.com/Ninoh-FOX/toolchain.git
+
 $ cd toolchain
+
 $ make rg350_defconfig BR2_EXTERNAL=board/opendingux
+
 $ make
+
 # To generate upgrade image
+
 $ . board/opendingux/gcw0/make_upgrade.sh
 
 ======================================================
@@ -124,6 +131,7 @@ Offline build:
 
 In order to do an offline-build (not connected to the net), fetch all
 selected source by issuing a
+
 $ make source
 
 before you disconnect.
@@ -147,20 +155,26 @@ More finegrained configuration:
 ===============================
 
 You can specify a config-file for uClibc:
+
 $ make UCLIBC_CONFIG_FILE=/my/uClibc.config
 
 And you can specify a config-file for busybox:
+
 $ make BUSYBOX_CONFIG_FILE=/my/busybox.config
 
 To use a non-standard host-compiler (if you do not have 'gcc'),
 make sure that the compiler is in your PATH and that the library paths are
 setup properly, if your compiler is built dynamically:
+
 $ make HOSTCC=gcc-4.3.orig HOSTCXX=gcc-4.3-mine
 
 Depending on your configuration, there are some targets you can use to
 use menuconfig of certain packages. This includes:
+
 $ make HOSTCC=gcc-4.3 linux-menuconfig
+
 $ make HOSTCC=gcc-4.3 uclibc-menuconfig
+
 $ make HOSTCC=gcc-4.3 busybox-menuconfig
 
 Please feed suggestions, bug reports, insults, and bribes back to the
@@ -173,7 +187,10 @@ Download this git
 Go to kenel folder.
 
 $ make ARCH=mips pocketgo2_defconfig
+
 $ make ARCH=mips vmlinuz.bin -j4
+
 $ make ARCH=mips modules -j4
+
 $ ./create_modules_fs.sh
 
