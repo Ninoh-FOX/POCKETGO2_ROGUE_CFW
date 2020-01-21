@@ -80,4 +80,4 @@ One time that the program finish, put the sd in the console, NOT RESIZE THE PART
 
 You can also use flasher.opk for the same, but it takes much longer and being a console that has the SD1 (TF1) of the system at hand because I do not see it really necessary, even so, it is in the release. If you would like to use it, it is advisable to put it in the apps folder of the SD2 (TF2).
 
-For future updates you will only need to use the update.opk, which is used just like any application. You can use it in both the apps folder of SD1 (TF1) or SD2 (TF2).
+For future updates you will only need to use the update.opk, which is used just like any application launched from GMENU2X. You can use it in both the apps folder of SD1 (TF1) or SD2 (TF2).
