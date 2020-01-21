@@ -81,3 +81,99 @@ One time that the program finish, put the sd in the console, NOT RESIZE THE PART
 You can also use flasher.opk for the same, but it takes much longer and being a console that has the SD1 (TF1) of the system at hand because I do not see it really necessary, even so, it is in the release. If you would like to use it, it is advisable to put it in the apps folder of the SD2 (TF2).
 
 For future updates you will only need to use the update.opk, which is used just like any application launched from GMENU2X. You can use it in both the apps folder of SD1 (TF1) or SD2 (TF2).
+
+# BUILDING the code:
+
+First you need a pc or vm with Debian 9.11 64 bits.
+
+### Pre-Build Steps ###
+
+$ sudo apt-get update
+$ sudo apt-get install bison flex gettext texinfo wget cpio python unzip mercurial subversion libncurses5-dev libc6-dev-i386 bzr squashfs-tools
+## you need a javac compiler, (i.e. sudo apt-get install gcj-4.9-jdk)
+
+### Build Steps ###
+
+## Enter the directory where you want to clone the git repo
+## This assumes that you have a clean buildroot/dl and buildroot/output directory 
+$ git clone https://github.com/Ninoh-FOX/toolchain.git
+$ cd toolchain
+$ make rg350_defconfig BR2_EXTERNAL=board/opendingux
+$ make
+# To generate upgrade image
+$ . board/opendingux/gcw0/make_upgrade.sh
+
+======================================================
+
+
+To build and use the buildroot stuff, do the following:
+
+1) run 'make menuconfig'
+2) select the packages you wish to compile
+3) run 'make'
+4) wait while it compiles
+5) Use your shiny new root filesystem. Depending on which sort of
+    root filesystem you selected, you may want to loop mount it,
+    chroot into it, nfs mount it on your target device, burn it
+    to flash, or whatever is appropriate for your target system.
+
+You do not need to be root to build or run buildroot.  Have fun!
+
+Offline build:
+==============
+
+In order to do an offline-build (not connected to the net), fetch all
+selected source by issuing a
+$ make source
+
+before you disconnect.
+If your build-host is never connected, then you have to copy buildroot
+and your toplevel .config to a machine that has an internet-connection
+and issue "make source" there, then copy the content of your dl/ dir to
+the build-host.
+
+Building out-of-tree:
+=====================
+
+Buildroot supports building out of tree with a syntax similar
+to the Linux kernel. To use it, add O=<directory> to the
+make command line, E.G.:
+
+$ make O=/tmp/build
+
+And all the output files (including .config) will be located under /tmp/build.
+
+More finegrained configuration:
+===============================
+
+You can specify a config-file for uClibc:
+$ make UCLIBC_CONFIG_FILE=/my/uClibc.config
+
+And you can specify a config-file for busybox:
+$ make BUSYBOX_CONFIG_FILE=/my/busybox.config
+
+To use a non-standard host-compiler (if you do not have 'gcc'),
+make sure that the compiler is in your PATH and that the library paths are
+setup properly, if your compiler is built dynamically:
+$ make HOSTCC=gcc-4.3.orig HOSTCXX=gcc-4.3-mine
+
+Depending on your configuration, there are some targets you can use to
+use menuconfig of certain packages. This includes:
+$ make HOSTCC=gcc-4.3 linux-menuconfig
+$ make HOSTCC=gcc-4.3 uclibc-menuconfig
+$ make HOSTCC=gcc-4.3 busybox-menuconfig
+
+Please feed suggestions, bug reports, insults, and bribes back to the
+buildroot mailing list: buildroot@buildroot.org
+
+Build the kernel:
+===============================
+
+Download this git
+Go to kenel folder.
+
+$ make ARCH=mips pocketgo2_defconfig
+$ make ARCH=mips vmlinuz.bin -j4
+$ make ARCH=mips modules -j4
+$ ./create_modules_fs.sh
+
