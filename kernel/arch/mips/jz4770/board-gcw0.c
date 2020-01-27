@@ -332,7 +332,6 @@ static struct jz_battery_platform_data gcw0_battery_pdata = {
 	},
 };
 
-
 /* Charger */
 
 //#define GPIO_DC_CHARGER		JZ_GPIO_PORTF(5)
@@ -441,7 +440,7 @@ static struct i2c_board_info gcw0_i2c0_devs[] __initdata = {
 };
 
 /* We don't have a use for the INT pin yet. */
-#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
+//#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
 //static struct i2c_board_info gcw0_i2c1_devs[] __initdata = {
 //	{
 //		.type		= "mxc6225",
@@ -869,10 +868,10 @@ static struct pinctrl_map pin_map[] __initdata = {
 	PIN_MAP_MUX_GROUP("pwm-backlight", PINCTRL_STATE_DEFAULT,
 			  "jz4770-pinctrl", NULL, "pwm1"),
 	/* pwm4: rumble motor */
-	PIN_MAP_MUX_GROUP("pwm-haptic", PINCTRL_STATE_DEFAULT,
-			  "jz4770-pinctrl", NULL, "pwm4"),
-	PIN_MAP_MUX_GROUP("musb-jz.0", PINCTRL_STATE_DEFAULT,
-			  "jz4770-pinctrl", NULL, "otg"),
+//	PIN_MAP_MUX_GROUP("pwm-haptic", PINCTRL_STATE_DEFAULT,
+//			  "jz4770-pinctrl", NULL, "pwm4"),
+//	PIN_MAP_MUX_GROUP("musb-jz.0", PINCTRL_STATE_DEFAULT,
+//			  "jz4770-pinctrl", NULL, "otg"),
 	PIN_MAP_MUX_GROUP("jz-lcd.0", PINCTRL_STATE_DEFAULT,
 			  "jz4770-pinctrl", "lcd_rgb888", "lcd"),
 	PIN_MAP_MUX_GROUP("jz-lcd.0", PINCTRL_STATE_SLEEP,
