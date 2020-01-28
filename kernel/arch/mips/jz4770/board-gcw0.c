@@ -225,7 +225,7 @@ static struct gpio_keys_button gcw0_buttons[] = {
 		.code			= KEY_PAUSE,
 		.debounce_interval	= 10,
 	},*/
-
+/*PocketGo 2*/
 	/* MENU button */ {
 		.gpio			= JZ_GPIO_PORTE(8),
 		.active_low		= 1,
