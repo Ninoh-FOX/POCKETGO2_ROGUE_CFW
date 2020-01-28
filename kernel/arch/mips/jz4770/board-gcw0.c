@@ -8,6 +8,9 @@
  * GCW Zero specific changes:
  * Copyright (C) 2012, Maarten ter Huurne <maarten@treewalker.org>
  *
+ * PocketGo 2/Play Go specific changes:
+ * 2019-2020, Marcelino Casado Clemente <ninohfox@gmail.com>
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
