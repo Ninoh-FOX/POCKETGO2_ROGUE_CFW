@@ -38,7 +38,7 @@
 #include <asm/reboot.h>
 
 #include <linux/mmc/host.h>
-#include <linux/act8600_power.h>
+//#include <linux/act8600_power.h>
 #include <linux/platform_data/jz4770_fb.h>
 #include <linux/platform_data/linkdev.h>
 #include <linux/platform_data/mxc6225.h>
@@ -412,7 +412,7 @@ static struct platform_device gcw0_internal_usb_regulator_device = {
 
 /* USB OTG (musb) */
 
-#define GPIO_USB_OTG_ID_PIN	JZ_GPIO_PORTF(12)
+#define GPIO_USB_OTG_ID_PIN	JZ_GPIO_PORTF(18)
 
 static struct jz_otg_board_data gcw0_otg_board_data = {
 	.gpio_id_pin = GPIO_USB_OTG_ID_PIN,
@@ -443,13 +443,13 @@ static struct i2c_board_info gcw0_i2c0_devs[] __initdata = {
 };
 
 /* We don't have a use for the INT pin yet. */
-//#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
-//static struct i2c_board_info gcw0_i2c1_devs[] __initdata = {
-//	{
-//		.type		= "mxc6225",
-//		.addr		= MXC6225_I2C_ADDR,
-//	},
-//};
+#define GPIO_MXC6225_INT	JZ_GPIO_PORTF(13)
+static struct i2c_board_info gcw0_i2c1_devs[] __initdata = {
+	{
+		.type		= "mxc6225",
+		.addr		= MXC6225_I2C_ADDR,
+	},
+};
 
 //static struct i2c_board_info gcw0_i2c3_devs[] __initdata = {
 //	{
@@ -603,18 +603,18 @@ static struct platform_device gcw0_led_device = {
 	},
 };
 
-static struct rfkill_regulator_platform_data gcw0_rfkill_pdata = {
-	.name = "gcw0-wifi",
-	.type = RFKILL_TYPE_WLAN,
-};
+//static struct rfkill_regulator_platform_data gcw0_rfkill_pdata = {
+//	.name = "gcw0-wifi",
+//	.type = RFKILL_TYPE_WLAN,
+//};
 
-static struct platform_device gcw0_rfkill_device = {
-	.name = "rfkill-regulator",
-	.id = 0,
-	.dev = {
-		.platform_data = &gcw0_rfkill_pdata,
-	},
-};
+//static struct platform_device gcw0_rfkill_device = {
+//	.name = "rfkill-regulator",
+//	.id = 0,
+//	.dev = {
+//		.platform_data = &gcw0_rfkill_pdata,
+//	},
+//};
 
 static const char * gcw0_joystick_gpiokeys_whitelist[] = {
 	"evdev",
@@ -695,19 +695,6 @@ static const struct linkdev_pdata_key_map gcw0_key_map[] = {
 	{
 		.code = KEY_BACKSPACE,
 		.event.code = BTN_TR,
-	},
-	/*POCKETGO2*/	
-	{
-		.code = KEY_RIGHTSHIFT,
-		.event.code = BTN_TL2,
-	},
-	{
-		.code = KEY_RIGHTALT,
-		.event.code = BTN_TR2,
-	},
-	{
-		.code = KEY_RIGHTCTRL,
-		.event.code = BTN_MODE,
 	},
 };
 
@@ -806,7 +793,7 @@ static struct platform_device *jz_platform_devices[] __initdata = {
 //	&gcw0_dc_charger_device,
 	&gcw0_usb_charger_device,
 	&jz4770_vpu_device,
-	&gcw0_rfkill_device,
+//	&gcw0_rfkill_device,
 	&gcw0_joystick_device,
 	&jz4770_wdt_device,
 	&gcw0_haptic_device,
@@ -834,7 +821,7 @@ static void __init board_i2c_init(void)
 	jz4770_i2c1_device.dev.platform_data = &gcw0_i2c1_platform_data;
 
 	i2c_register_board_info(0, gcw0_i2c0_devs, ARRAY_SIZE(gcw0_i2c0_devs));
-//	i2c_register_board_info(1, gcw0_i2c1_devs, ARRAY_SIZE(gcw0_i2c1_devs));
+	i2c_register_board_info(1, gcw0_i2c1_devs, ARRAY_SIZE(gcw0_i2c1_devs));
 //	i2c_register_board_info(3, gcw0_i2c3_devs, ARRAY_SIZE(gcw0_i2c3_devs));
 	i2c_register_board_info(4, gcw0_i2c4_devs, ARRAY_SIZE(gcw0_i2c4_devs));
 }
@@ -851,7 +838,7 @@ static void __init board_gpio_setup(void)
 	jz_gpio_disable_pullup(GPIO_USB_CHARGER);
 
 	/* MXC6225 data sheet says INT should not be pulled up or down */
-//	jz_gpio_disable_pullup(GPIO_MXC6225_INT);
+	jz_gpio_disable_pullup(GPIO_MXC6225_INT);
 }
 
 static struct pinctrl_map pin_map[] __initdata = {
