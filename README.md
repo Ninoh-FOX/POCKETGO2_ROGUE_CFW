@@ -4,6 +4,9 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.4: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.4
+
 # update firmware 1.0.3: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.3
 
@@ -14,6 +17,13 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
+
+### 1.0.4:<br>
+
+1. Fixed R2 not recognition in some motherboards (again)
+2. Update scripts, now you can format in ext4 and you can do a better backup of the home folder.
+3. Remove Esoteric from the rootfs, but you can install this from opk.
+4. Removed inessesaries funtions.
 
 ### 1.0.3:<br>
 
