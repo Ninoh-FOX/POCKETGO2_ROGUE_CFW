@@ -4,6 +4,9 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.5: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.5
+
 # update firmware 1.0.4: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.4
 
@@ -17,6 +20,13 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
+
+### 1.0.5:<br>
+
+1. Recompilded code with the new toolchain
+2. Update linux-firmware package
+3. Update Gmenu2x, now you can config the opacy level in the backgroun preview imagen game.
+4. Removed inessesaries funtions of the kernel again.
 
 ### 1.0.4:<br>
 
