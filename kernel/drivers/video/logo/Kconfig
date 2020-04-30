@@ -87,6 +87,11 @@ config LOGO_M32R_CLUT224
 	depends on JZ4770_GCW0
 	default n
 
++config LOGO_PG2_CLUT224
+	bool "224-color PG2 logo"
+	depends on JZ4770_GCW0
+	default n
+
 +config LOGO_RG350_CLUT224
 	bool "224-color RG350 logo"
 	depends on JZ4770_GCW0

@@ -16,6 +16,7 @@ obj-$(CONFIG_LOGO_SUPERH_VGA16)		+= logo_superh_vga16.o
 obj-$(CONFIG_LOGO_SUPERH_CLUT224)	+= logo_superh_clut224.o
 obj-$(CONFIG_LOGO_M32R_CLUT224)		+= logo_m32r_clut224.o
 obj-$(CONFIG_LOGO_GCWZERO_CLUT224)	+= logo_gcwzero_clut224.o
+obj-$(CONFIG_LOGO_PG2_CLUT224)		+= logo_pg2_clut224.o
 obj-$(CONFIG_LOGO_RG350_CLUT224)	+= logo_rg350_clut224.o
 obj-$(CONFIG_LOGO_RG350_NOOD_CLUT224)	+= logo_rg350_nood_clut224.o
 
