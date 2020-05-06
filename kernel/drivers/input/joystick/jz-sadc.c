@@ -31,15 +31,15 @@
 #define JZ_REG_ADC_TS_DATA	8
 
 
-#define JOYSTICK_MIN_X		-200
-#define JOYSTICK_MIN_Y  	-200
-#define JOYSTICK_MAX_X		3400
-#define JOYSTICK_MAX_Y		3400
+#define JOYSTICK_MIN_X		0
+#define JOYSTICK_MIN_Y  	0
+#define JOYSTICK_MAX_X		3300
+#define JOYSTICK_MAX_Y		3300
 
 #define JOYSTICK_NOISE_X	4
 #define JOYSTICK_NOISE_Y	4
-#define JOYSTICK_FLAT_X		400
-#define JOYSTICK_FLAT_Y		400
+#define JOYSTICK_FLAT_X		200
+#define JOYSTICK_FLAT_Y		200
 
 
 struct jz_joystick {
