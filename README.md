@@ -4,6 +4,9 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.6: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.6
+
 # update firmware 1.0.5: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.5
 
@@ -20,6 +23,33 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
+
+### 1.0.6:<br>
+
+1. Add the new keys combo for dis/enable the analog stick (POWER+L1), so the keys combos is the follow list:
+
++ POWER = Screen on/off in gmenu2x.
++ POWER+A = Change the resolution screen to fullscreen in hardware mode.
++ POWER+B = switch analog stick to dpad.
++ POWER+X = Screenshot capture.
++ POWER+L1 = Dis/enable analog stick
++ POWER+R1 = enable mode mouse (stick is cursor, L2&R2 the mouse buttons)
++ POWER+VOL+ or VOL- = change the brightness screen
++ POWER+UP or DOWN DPAD = change the sharpness
++ POOWER+SELECT = kill aplication
++ POWER+START = Reboot
+
+2. Gmenu2x now support all carapters of the WORLD!!<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot014.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot015.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot016.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot017.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot018.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot019.png)<br>
+
+You may erase the file /media/data/.linker for that this has effect.
+
+3. Update libs in system and kernel.
 
 ### 1.0.5:<br>
 
