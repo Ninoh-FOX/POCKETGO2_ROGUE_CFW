@@ -39,7 +39,7 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 + POOWER+SELECT = kill aplication
 + POWER+START = Reboot
 
-2. Gmenu2x now support all carapters of the WORLD!!<br>
+2. Gmenu2x now support all characters of the WORLD!!<br>
 ![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot014.png)<br>
 ![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot015.png)<br>
 ![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot016.png)<br>
