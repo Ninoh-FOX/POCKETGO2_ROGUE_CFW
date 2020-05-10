@@ -4,6 +4,9 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.7: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.7
+
 # update firmware 1.0.6: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.6
 
@@ -23,6 +26,36 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
+
+### 1.0.7:<br>
+
+-Gmenu2-
+1. Update GMENU2x, now it shows the internal language of the game, if it has it, according to the selected language.
+2. Add Korean language.
+3. fixed some missing texts.
+4. Optimized themes, now overwrites system icons too.
+5. Changed multi-language fonts to a much more comfortable one to read.<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot101.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot102.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot103.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot104.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot105.png)<br>
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshot106.png)<br>
+
+
+### IMPORTANT: You have to delete the file /media/data/.linker so that all the changes are overwritten, otherwise there will be no opks that lose the name.
+
+-Sound-
+1. Now the volume of the headphones is also saved.
+2. the Master volume control is now accessible from the SOUND MIXER, it is no longer necessary to modify the speaker to lower the volume.
+
+-System-
+1. Fixed mapping of joystick emulation as dpad in versions 1.0.5 and 1.0.6
+2. Optimized the clock of the GPU, now it is to the maximum recommended by the chip. (before 360Mhz, now 500Mhz)
+3. Optimized the USB core, there will be no more random restarts when the console was disconnected from the computer.
+
+### You can see all the changes in the toolchain and kernel sections of my repositories
+
 
 ### 1.0.6:<br>
 
