@@ -31,7 +31,7 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 -Gmenu2-
 1. Update GMENU2x, now it shows the internal language of the game, if it has it, according to the selected language.
-2. Add Korean language.
+2. Add Korean, Japanese and Chinese languages.
 3. fixed some missing texts.
 4. Optimized themes, now overwrites system icons too.
 5. Changed multi-language fonts to a much more comfortable one to read.<br>
