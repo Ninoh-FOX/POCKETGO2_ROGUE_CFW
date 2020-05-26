@@ -33,7 +33,9 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 ### 1.0.8:<br>
 -NEW-
 1. Added PocketGo2 v2 platform.
-### NOTE: PG2 and PG2V2 has differents bootloader, kernel and mapped keys. Install your correct version please.
+### NOTE: PG2 and PG2V2 has differents bootloader, kernel and mapped keys. Install your correct version please.<br>
+
+![](https://raw.githubusercontent.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/master/screenshots/screenshotalsa.png)<br>
 
 -SOUND-
 1. Finally, all sounds problems is fixed, yes, fixed, now the default volume control is Master, and the volumen keys works with this, anyway, you can change the pcm and heardphones values is you wish and the console save the changes for the next reboot. 
