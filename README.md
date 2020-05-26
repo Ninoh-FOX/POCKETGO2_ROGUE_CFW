@@ -4,6 +4,9 @@
 
 Oficial firmware for Pocketgo 2
 
+# update firmware 1.0.8: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.8
+
 # update firmware 1.0.7: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.7
 
@@ -26,6 +29,15 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
+
+### 1.0.8:<br>
+-NEW-
+1. Added PocketGo2 v2 platform.
+### NOTE: PG2 and PG2V2 has differents bootloader, kernel and mapped keys. Install your correct version please.
+
+-SOUND-
+1. Finally, all sounds problems is fixed, yes, fixed, now the default volume control is Master, and the volumen keys works with this, anyway, you can change the pcm and heardphones values is you wish and the console save the changes for the next reboot. 
+
 
 ### 1.0.7:<br>
 
