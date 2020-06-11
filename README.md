@@ -11,10 +11,10 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.8
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.7
 
 # update firmware 1.0.6: <br>
-https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.6
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/1.0.6
 
 # update firmware 1.0.5: <br>
-https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.5
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/1.0.5
 
 # update firmware 1.0.4: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.4
