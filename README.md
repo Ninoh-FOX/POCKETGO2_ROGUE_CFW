@@ -2,7 +2,10 @@
 
 # POCKETGO2 ROGUE CFW
 
-Oficial firmware for Pocketgo 2
+Oficial firmware for Pocketgo 2 and Pocketgo 2 v2 (this has reset button)
+
+# update firmware 1.0.9: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.9
 
 # update firmware 1.0.8: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.8
@@ -29,6 +32,34 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.2
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
+
+### 1.0.9:<br>
+
+-gmenu2x-
+Several changes have been added, including:
+
+NOTE: you will have to delete the file /media/data/.linker so that you can reconfigure gmenu2x, and calm, it has been modified so that it saves the personal changes of the opks
+
+- option to change brightness
+- new theme in pixel mode (this does not support all fonts)
+- New way to monitor the battery.
+- the titles can now be read in two lines
+there are more changes, but I don't remember them all XD
+
+-kernel-
+- boot mode has been changed, now read mininit-syspart file from boot partition. This way you can update without having to recompile the kernel.
+
+- cleaned unnecessary drivers.
+
+- gpu frequency corrected according to the cpu.
+
+- Battery capacity has been corrected.
+
+-General-
+
+- Added ROGUE Manual
+- Added news combo keys (see the manual)
+- Updated some libraries.
 
 ### 1.0.8:<br>
 -NEW-
