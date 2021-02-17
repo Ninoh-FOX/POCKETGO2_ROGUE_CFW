@@ -10,7 +10,7 @@ If it is the first time you install the ROGUE CFW, please do not update from STO
 
 If you need to update your ROGUE CFW, then use the update .opk packages.
 
-##COMPILATION
+## COMPILATION
 
 first check that your linux system has the packages installed:
 
@@ -27,7 +27,7 @@ if you have debian 9, just download the binarion package at:
 
 https://github.com/Ninoh-FOX/toolchain/releases
 
-and extract this in / opt / gcw0-toolchain
+and extract this in /opt/gcw0-toolchain
 
 If you have a different Linux distribution, run the rebuild.sh script that is inside the toolchain folder to create the correct / opt / gcw0-toolchain for your system.
 
@@ -35,13 +35,13 @@ Once all this is configured, the steps to compile the system are:
 
 for Pocket Go 2 (not reset button)
 
-: ~ / toolchain $ make pocketgo2_defconfig
-: ~ / toolchain $ make -f Makefile.pg2 -j4
+: ~/toolchain$ make pocketgo2_defconfig
+: ~/toolchain$ make -f Makefile.pg2 -j4
 
 for Pocket Go 2 v2 (with reset button)
 
-: ~ / toolchain $ make pocketgo2v2_defconfig
-: ~ / toolchain $ make -f Makefile.pg2v2 -j4
+: ~/toolchain$ make pocketgo2v2_defconfig
+: ~/toolchain$ make -f Makefile.pg2v2 -j4
 
 When the whole process is finished you can create the installation packages or the sd_imagen.bin with the following commands:
 
