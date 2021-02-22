@@ -47,19 +47,19 @@ When the whole process is finished you can create the installation packages or t
 
 for Pocket Go 2
 
-: ~/toolchain/updaters$ ./create_kernel_pg.sh (this creates a kernel update package)
+: ~/toolchain/updaters$ ./create_kernel_pocketgo2.sh (this creates a kernel update package)
 
-: ~/toolchain/updaters$ ./create_updater_pg.sh (this creates a complete system update package)
+: ~/toolchain/updaters$ ./create_updater_pocketgo2.sh (this creates a complete system update package)
 
-: ~/toolchain/updaters/imager_pg$ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
+: ~/toolchain/updaters/imager_pocketgo2$ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
 
 for Pocket Go 2 v2
 
-: ~/toolchain/updaters$ ./create_kernel_pgv2.sh (this creates a kernel update package)
+: ~/toolchain/updaters$ ./create_kernel_pocketgo2v2.sh (this creates a kernel update package)
 
-: ~/toolchain/updaters$ ./create_updater_pgv2.sh (this creates a complete system update package)
+: ~/toolchain/updaters$ ./create_updater_pocketgo2v2.sh (this creates a complete system update package)
 
-: ~/toolchain/updaters/imager_v2$ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
+: ~/toolchain/updaters/imager_pocketgo2v2$ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
 
 # update firmware 1.0.9: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.9
