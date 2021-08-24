@@ -61,6 +61,19 @@ for Pocket Go 2 v2
 
 : ~/toolchain/updaters/imager_pocketgo2v2$ sudo ./create_sdimage.sh (this creates the sd_image.bin file)
 
+
+# update firmware 1.4: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.4
+
+# update firmware 1.3: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.3
+
+# update firmware 1.2: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.2
+
+# update firmware 1.1: <br>
+https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.1
+
 # update firmware 1.0.9: <br>
 https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.9
 
