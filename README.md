@@ -103,6 +103,38 @@ https://github.com/Ninoh-FOX/POCKETGO2_ROGUE_CFW/releases/tag/v1.0.1
 
 ## Changelog:<br>
 
+### 1.4:<br>
+- The volume control has been returned from the master channel since the crashing problem has been corrected when updating the alsa packages, allowing better control of the sound from alsamixer to level the pcm, headphones and master volumes separately.
+
+- Fixed a kernel configuration that did not allow to switch to rootfs backup by pressing X when starting the console.
+
+- The kernel has been patched with the latest generic linux kernel 3.12.74 package.
+
+- fixed battery drain on some v2 models when console was off.
+
+- DRM functions of superior kernels have been introduced in case in the future it is possible to update the ETNAVIV drivers in 3.12 (this would allow the graphics in Mario 64 port to be seen correctly).
+
+- Updated SDL1 to OD beta version
+
+- SDL2 has been updated from version 2.0.3 to version 2.0.12, thus allowing sound in applications that previously did not support it in the previous version (for example, in Mario 64 port it works perfectly).
+
+- Several packages have been updated, including the compilation form, so they have been optimized.
+
+- Added compatibility with most OPKs that are being released for OD beta.
+
+### 1.3:<br>
+- the sound control has been returned directly by PCM, apparently the control by Master was not compatible with some emulators.
+
+- If you need to lower the global volume of the console, and I do not mean to lower the volume or increase the volume with the keys, it is if the minimum volume is too high, you can adjust it from alsamixer (sound mixer) in the Headphone channel, This volume level will be saved even if you restart the console, so you can adjust it to your liking.
+
+### 1.2:<br>
+- changed alsasound config
+- changed poweroff screen mode
+
+### 1.1:<br>
+- Gmenu2X now save the last rom open and remember the list.
+- You can now poweroff the screen in anytime when the level brithgness is the minimal, press power vol- again (note: if you poweroff the brithgness the sound only work fine with mp3 player files.)
+
 ### 1.0.9:<br>
 
 -gmenu2x-
